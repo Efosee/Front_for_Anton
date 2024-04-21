@@ -1,13 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>ВКонтакте | Face ID</title>
+    <style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html, body{
+			height: 100%;
+			width: 100%;
+		}
+        .header {
+            background-color:  rgb(34, 34, 34);
+            color: white;
+            height: 5%;
+            width: 100%;
+            padding: 5px rgb(41, 41, 41);
+            font-family: "Jersey 10", sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: large;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .index_footer_wrap {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            height: 17%;
+            width: 100%;
+        }
+
+        .main {
+            background-color: rgb(20, 20, 20);
+            color: black;
+            height: 78%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        /* Очистка плавающих элементов */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .footer_wrap {
+            line-height: 1.36em;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            border-top: 1px solid var(--vkui--color_separator_primary);
+        }
+
+        .footer_copy,
+        .footer_links,
+        .footer_lang {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5%; /* Задаем отступы по горизонтали между блоками */
+            font-family: helvetica, sans-serif;
+            font-size: 12px;
+            color: rgb(113, 170, 235);
+        }
+
+        .link-without-underline {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .link-color {
+            color: rgb(142, 142, 142);
+        }
+
+        .gray-block-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55px;
+            height: 55px;
+            
+        }
+
+        .gr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20%;
+            padding-bottom: 10px;
+            
+        }
+
+        .text-under-image {
+            font-size: 20px;
+            font-family: verdana, sans-serif;
+            color: rgb(255, 255, 255);
+            margin-left: auto;
+            margin-right: auto;
+                       
+        }
+
+        .block-under-image {
+            width: 85%;
+            height: 36px;
+            margin-left: auto;
+            margin-right: auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+                       
+        }
+
+        .text-input {
+            border: 2px solid rgb(84, 84, 84); /* Граница блока */
+            background-color: rgb(51, 51, 51);
+            color: rgb(255, 255, 255);
+            border-radius: 10px; /* Устанавливаем радиус закругления краев */
+            height: 36px;
+            width: 80%; /* Ширина блока */
+            font-size: 16px; /* Размер шрифта */
+            outline: none; /* Убираем стандартное выделение при фокусе */
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+                         
+        }
+
+        
+        .login-button {
+            background-color: rgb(255, 255, 255); /* Цвет фона кнопки */
+            color: rgb(0, 0, 0); /* Цвет текста кнопки */
+            border: none; /* Убираем границу кнопки */
+            border-radius: 10px; /* Скругление краев кнопки */
+            width: 85%;
+            height: 36px;
+            cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+            font-size: 16px; /* Размер текста кнопки */
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25%;
+            font-family: helvetica, sans-serif;
+                       
+        }
+
+        .login-button:hover {
+            background-color: rgb(228, 228, 228); /* Изменяем цвет фона при наведении на кнопку */
+        }
+
+        .gray-block {
+            
+            background-color: rgb(34, 34, 34); /* Устанавливаем серый цвет фона */
+            border-radius: 10px; /* Устанавливаем радиус закругления краев */
+            width: 272px;
+            height: 396px;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0; /* Начальное и конечное состояние: прозрачный текст */
+            }
+            50% {
+                opacity: 1; /* Половина времени: непрозрачный текст */
+            }
+        }
+
+        .animated-text {
+            animation: fadeInOut 5s infinite; /* Применяем анимацию к тексту с бесконечным повторением */
+        }
+        
+    </style>
 </head>
 <body>
-	<div class="cls"></div>
-	<div class="lslds"></div>
+    <div class="header">
+        <h1 class="animated-text">Hello we are VK group</h1>
+    </div>
+
+    <div class="main">
+        <div class="gray-block">
+            <div class="gr"><img src="vk.png" class="gray-block-image"></div>
+            
+            <div class="block-under-image"><a class="text-under-image">Вход ВКонтакте</a></div>
+            
+            <input class="text-input" placeholder="Телефон или почта"></input>
+            
+            <button class="login-button">Войти</button>
+            
+        
+        
+        </div>
+        
+    </div>
+
+    <div id="index_footer_wrap" class="footer_wrap index_footer_wrap">
+        <div class="footer_nav" id="bottom_nav">
+        <div class="footer_copy"><a href="/about" class="link-without-underline">ВКонтакте</a> <a class="link-color">© 2006-2024</a></div>
+        <div class="footer_links">
+          <a class="link-without-underline" href="/about">О ВКонтакте</a>
+          <a class="link-without-underline" href="/terms">Правила</a>
+          <a class="link-without-underline" href="/biz?utm_source=vk_inside&amp;utm_medium=authorization" target="_blank" style="">Для бизнеса</a>
+          <a class="link-without-underline" href="https://dev.vk.com">Разработчикам</a>
+        </div>
+        <div class="footer_lang"><a class="footer_lang_link" onclick="Language.changeLang(this, 6, '0109a85eed6de04a98')">Deutsch</a><a class="footer_lang_link" onclick="Language.changeLang(this, 0, '0109a85eed6de04a98')">  Русский</a><a class="footer_lang_link" onclick="Language.changeLang(this, 3, '0109a85eed6de04a98')"> English</a><a class="footer_lang_link" onclick="if (vk.al) { showBox('lang.php', {act: 'lang_dialog', all: 1}, {params: {bodyStyle: 'padding: 0px'}, noreload: true}); } else { changeLang(1); } return false;"> все языки »</a></div>
+      </div>
+      
+      <div class="footer_bench clear">
+        
+      </div>
+      </div>
+    <div class="clearfix"></div>
 </body>
 </html>
