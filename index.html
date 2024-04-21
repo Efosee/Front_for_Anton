@@ -161,6 +161,12 @@
             font-family: helvetica, sans-serif;
                        
         }
+				.mr-10{
+					margin-top: 10px;
+					background-color: rgb(58, 198, 58);
+					color: aliceblue;
+					font-weight: bold;
+				}
 
         .login-button:hover {
             background-color: rgb(228, 228, 228); /* Изменяем цвет фона при наведении на кнопку */
@@ -203,6 +209,7 @@
             <input class="text-input" placeholder="Телефон или почта"></input>
             
             <button class="login-button">Войти</button>
+						<button class="login-button mr-10">Регистрация</button>
             
         
         
@@ -214,9 +221,9 @@
         <div class="footer_nav" id="bottom_nav">
         <div class="footer_copy"><a href="/about" class="link-without-underline">ВКонтакте</a> <a class="link-color">© 2006-2024</a></div>
         <div class="footer_links">
-          <a class="link-without-underline" href="/about">О ВКонтакте</a>
-          <a class="link-without-underline" href="/terms">Правила</a>
-          <a class="link-without-underline" href="/biz?utm_source=vk_inside&amp;utm_medium=authorization" target="_blank" style="">Для бизнеса</a>
+          <a class="link-without-underline" href="https://about">О ВКонтакте</a>
+          <a class="link-without-underline" href="https://terms">Правила</a>
+          <a class="link-without-underline" href="https://biz?utm_source=vk_inside&amp;utm_medium=authorization" target="_blank" style="">Для бизнеса</a>
           <a class="link-without-underline" href="https://dev.vk.com">Разработчикам</a>
         </div>
         <div class="footer_lang"><a class="footer_lang_link" onclick="Language.changeLang(this, 6, '0109a85eed6de04a98')">Deutsch</a><a class="footer_lang_link" onclick="Language.changeLang(this, 0, '0109a85eed6de04a98')">  Русский</a><a class="footer_lang_link" onclick="Language.changeLang(this, 3, '0109a85eed6de04a98')"> English</a><a class="footer_lang_link" onclick="if (vk.al) { showBox('lang.php', {act: 'lang_dialog', all: 1}, {params: {bodyStyle: 'padding: 0px'}, noreload: true}); } else { changeLang(1); } return false;"> все языки »</a></div>
